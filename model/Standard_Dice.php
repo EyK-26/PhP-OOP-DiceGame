@@ -1,9 +1,9 @@
 <?php
-class Dice
+class Standard_Dice
 {
-    public int $sides = 6;
+    private ?int $sides = 6;
 
-    public function __construct(?int $sideNum = 6)
+    public function __construct(?int $sideNum)
     {
         $this->sides = $sideNum;
     }

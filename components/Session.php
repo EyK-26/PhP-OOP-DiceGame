@@ -29,7 +29,7 @@ class Session
 
     public static function unset_session(string $key): void
     {
-        if (!empty($_SESSION[$key])) {
+        if (isset($_SESSION[$key])) {
             unset($_SESSION[$key]);
         }
         return;
