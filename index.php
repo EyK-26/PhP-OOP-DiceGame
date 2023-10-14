@@ -1,6 +1,4 @@
 <?php
-require_once 'components/Session.php';
-require_once 'components/Create.php';
 require_once 'components/validate.php';
 require_once 'components/Instanciate.php';
 
