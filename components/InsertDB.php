@@ -44,4 +44,17 @@ class InsertDB
             echo "<br>";
         }
     }
+
+    public static function getDB()
+    {
+        $statement = static::$connection->prepare("
+        SELECT `rolls`.`value`, `rolls`.`dice_rolled`
+        FROM `rolls`
+        WHERE 1
+        LIMIT 10
+        ");
+        $statement->execute();
+        $statement->setFetchMode(PDO::FETCH_ASSOC);
+        return $statement->fetchAll();
+    }
 }

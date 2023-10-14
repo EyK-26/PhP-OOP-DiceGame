@@ -47,6 +47,9 @@ $errors = Get_Session_Data::$errors;
     <?= $entered_dice ?? null ?>
     <hr>
     <?php include 'components/results.php' ?>
+    <hr>
+    <h4>Stats: </h4>
+    <?php include 'components/stats.php' ?>
 </body>
 
 </html>
