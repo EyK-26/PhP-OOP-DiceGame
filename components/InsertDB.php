@@ -51,7 +51,7 @@ class InsertDB
         SELECT `rolls`.`value`, `rolls`.`dice_rolled`
         FROM `rolls`
         WHERE 1
-        LIMIT 10
+        ORDER BY `id` DESC
         ");
         $statement->execute();
         $statement->setFetchMode(PDO::FETCH_ASSOC);
